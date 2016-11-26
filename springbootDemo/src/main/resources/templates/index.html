@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta content="text/html" charset="UTF-8" />
+    <title>Index Title</title>
+
+    <!--<link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" />-->
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!--<link th:href="@{bootstrap/css/bootstrap-theme.min.css}" rel="stylesheet" />-->
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">访问model</h3>
+        </div>
+
+        <div class="panel-body">
+            <span th:text="${singlePerson.username}"></span>
+        </div>
+
+    </div>
+
+    <div thLif="${not #list.isEmpty(people)}">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">列表</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="panel-group">
+                    <li class="list-group-item" th:each="person:${people}">
+                        <span th:text="${person.username}"></span>
+                        <span th:text="${person.address}"></span>
+                        <button class="btn" th:onclick="'getUserName(\''+${person.username}+'\');'">获得者名字</button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+<!--<script th:src="@{jquery-1.10.2.min.js}" type="text/javascript"></script>-->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<!--<script th:src="@{bootstrap/js/bootstrap.min.js}" type="text/javascript"></script>-->
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script th:inline="javascript">
+    var single = [[${singlePerson}]];
+
+    console.log(single.username + "/" + single.address);
+
+    function getUserName(username) {
+        console.log("username = " + username);
+    }
+
+</script>
+
+
+
+</body>
+</html>

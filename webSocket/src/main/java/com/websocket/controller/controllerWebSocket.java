@@ -20,12 +20,12 @@ public class controllerWebSocket {
     @Autowired
     private SimpMessagingTemplate simpMessagingTemplate; /*注入SimpMessagingTemplate向浏览器发送消息*/
 
-    @MessageMapping("/welcome")
-    @SendTo("/topic/getResponse")/*当服务端有信息时会给订阅了此路径的浏览器发送消息*/
+    /*@MessageMapping("/welcome")
+    @SendTo("/topic/getResponse")*//*当服务端有信息时会给订阅了此路径的浏览器发送消息*//*
     public nickzhangResponse say(nickzhangMessage message) throws Exception{
         Thread.sleep(1000);
         return new nickzhangResponse("Welcome , " + message.getName() + "!");
-    }
+    }*/
 
 
     @MessageMapping("/chat")

@@ -2,13 +2,11 @@ package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
-@EnableCaching  /*开启缓存支持*/
-public class SpringbootCacheApplication {
+public class DockerDemo1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootCacheApplication.class, args);
+		SpringApplication.run(DockerDemo1Application.class, args);
 	}
 }

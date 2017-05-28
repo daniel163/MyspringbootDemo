@@ -6,8 +6,6 @@ import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletCont
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.web.servlet.ErrorPage;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
-
 import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication

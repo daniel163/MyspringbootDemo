@@ -22,8 +22,8 @@ public class DemoServiceImpl implements DemoService{
     @CachePut(value = "people",key = "#person.id")  /*@CachePut缓存新增的或更新的数据到缓存,缓存名称为people,数据的key是person的id*/
     public Person save(Person person) {
         Person p = personRepository.save(person);
-        System.out.println("person = " + JSON.toJSONString(p));
-        return null;
+        System.out.println("为"+JSON.toJSONString(p) + "做了缓存..");
+        return p;
     }
 
     @Override

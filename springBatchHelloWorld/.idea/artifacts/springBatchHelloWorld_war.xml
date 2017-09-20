@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springBatchHelloWorld:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="springBatch-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="springBatchHelloWorld:war exploded" />
+    </root>
+  </artifact>
+</component>

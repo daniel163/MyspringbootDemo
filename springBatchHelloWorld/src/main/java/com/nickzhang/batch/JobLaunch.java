@@ -16,7 +16,8 @@ public class JobLaunch {
         ApplicationContext context = new ClassPathXmlApplicationContext(
                 "batch.xml");
         JobLauncher launcher = (JobLauncher) context.getBean("jobLauncher");
-        Job job = (Job) context.getBean("helloWorldJob");
+        //Job job = (Job) context.getBean("helloWorldJob");
+        Job job = (Job) context.getBean("csvJob");
 
         try {
             /* 运行Job */

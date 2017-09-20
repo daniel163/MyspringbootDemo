@@ -17,6 +17,9 @@ http://www.springframework.org/schema/context/spring-context-2.5.xsd"
         <property name="jobRepository" ref="jobRepository"/>
     </bean>
 
+    <bean id="csvItemProcessor" class="com.nickzhang.batch.CsvItemProcessor">
+    </bean>
+
     <bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
     </bean>
 
